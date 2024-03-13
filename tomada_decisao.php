@@ -1,6 +1,6 @@
 <?php
 
-$numero = 0;
+$numero = 1;
 
 // OPÇÃO UTILIZANDO IF E ELSE
 
