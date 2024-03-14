@@ -38,11 +38,14 @@ $numero = $_POST["numero"] ?? 0;
                     <div class="card-header">
                         Resultado
                     </div>
+                    <p>
                     <?php
                     for ($i = 0; $i < $numero; $i++) {
                         echo $i . "<br>";
                     }
+                    echo substr($numero,0,-2);
                     ?>
+                    </p>
                 </div>
             </div>
         </div>
