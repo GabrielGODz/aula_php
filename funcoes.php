@@ -56,10 +56,10 @@ function expoente($a, $b)
                     </div>
                     <div class="card-body">
                         <p>
-                        <?php
-                        echo expoente($numero, $expoente);
-                        ?>
-                    </p>
+                            <?php
+                            echo expoente($numero, $expoente);
+                            ?>
+                        </p>
                     </div>
                 </div>
             </div>

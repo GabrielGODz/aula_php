@@ -1,5 +1,7 @@
 <?php
 
+include("../verificar_autenticidade.php");
+
 $pk_cliente = "";
 $nome = "";
 $cpf = "";
@@ -61,25 +63,25 @@ if (isset($_GET['ref'])) {
                             <div class="row mb-3">
                                 <div class="col-md-1">
                                     <label for="pk_cliente" class="form-label">ID</label>
-                                    <input value="<?php echo $pk_cliente?>" readonly type="text" id="pk_cliente" name="pk_cliente" class="form-control">
+                                    <input value="<?php echo $pk_cliente ?>" readonly type="text" id="pk_cliente" name="pk_cliente" class="form-control">
                                 </div>
                                 <div class="col">
                                     <label for="nome" class="form-label">Nome</label>
-                                    <input value="<?php echo $nome?>" type="text" id="nome" name="nome" class="form-control" required>
+                                    <input value="<?php echo $nome ?>" type="text" id="nome" name="nome" class="form-control" required>
                                 </div>
                             </div>
                             <div class="row mb-3">
                                 <div class="col">
                                     <label for="cpf" class="form-label">CPF</label>
-                                    <input value="<?php echo $cpf?>" type="text" id="cpf" name="cpf" class="form-control" data-mask="000.000.000-00" minlength="14" required>
+                                    <input value="<?php echo $cpf ?>" type="text" id="cpf" name="cpf" class="form-control" data-mask="000.000.000-00" minlength="14" required>
                                 </div>
                                 <div class="col">
                                     <label for="whatsapp" class="form-label">WhatsApp</label>
-                                    <input value="<?php echo $whatsapp?>" type="text" id="whatsapp" name="whatsapp" class="form-control">
+                                    <input value="<?php echo $whatsapp ?>" type="text" id="whatsapp" name="whatsapp" class="form-control">
                                 </div>
                                 <div class="col">
                                     <label for="email" class="form-label">E-mail</label>
-                                    <input value="<?php echo $email?>" type="email" id="email" name="email" class="form-control" required>
+                                    <input value="<?php echo $email ?>" type="email" id="email" name="email" class="form-control" required>
                                 </div>
                             </div>
                         </div>

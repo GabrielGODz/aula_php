@@ -4,23 +4,46 @@ $numero = 1;
 
 // OPÇÃO UTILIZANDO IF E ELSE
 
-if($numero == 1) { echo "Janeiro"; }
-if($numero == 2) { echo "Fevereiro"; }
-if($numero == 3) { echo "Março"; }
-if($numero == 4) { echo "Abril"; }
-if($numero == 5) { echo "Maio"; }
-if($numero == 6) { echo "Junho"; }
-if($numero == 7) { echo "Julho"; }
-if($numero == 8) { echo "Agosto"; }
-if($numero == 9) { echo "Setembro"; }
-if($numero == 10) { echo "Outubro"; }
-if($numero == 11) { echo "Novembro"; }
-if($numero == 12) { echo "Dezembro"; }
-
+if ($numero == 1) {
+    echo "Janeiro";
+}
+if ($numero == 2) {
+    echo "Fevereiro";
+}
+if ($numero == 3) {
+    echo "Março";
+}
+if ($numero == 4) {
+    echo "Abril";
+}
+if ($numero == 5) {
+    echo "Maio";
+}
+if ($numero == 6) {
+    echo "Junho";
+}
+if ($numero == 7) {
+    echo "Julho";
+}
+if ($numero == 8) {
+    echo "Agosto";
+}
+if ($numero == 9) {
+    echo "Setembro";
+}
+if ($numero == 10) {
+    echo "Outubro";
+}
+if ($numero == 11) {
+    echo "Novembro";
+}
+if ($numero == 12) {
+    echo "Dezembro";
+}
 
 echo "<br><br>";
 
-switch($numero) {
+switch ($numero) {
     case 1:
         echo "Janeiro";
         break;
@@ -61,7 +84,3 @@ switch($numero) {
         echo "Mês não reconhecido";
         break;
 }
-
-
-
-?>

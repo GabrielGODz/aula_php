@@ -11,4 +11,3 @@ echo "<h3>Seja bem-vindo $nome</h3>";
 // Usando ásplas simples, é necessário concatenar string e variável
 // utilizando "ponto final" (.)
 echo 'Você está matriculado no ' . $escola . ', no turno da ' . $turno;
-

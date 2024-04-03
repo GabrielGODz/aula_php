@@ -1,4 +1,9 @@
+<?php
+include("../verificar_autenticidade.php");
+?>
+
 <!DOCTYPE html>
+
 <html lang="en">
 
 <head>
@@ -10,6 +15,22 @@
 </head>
 
 <body>
+
+    <header class="p-3 mb-3 border-bottom bg-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-1">
+                    <i class="bi bi-bootstrap fs-2"></i>
+                </div>
+                <div class="col text-end">
+                    <a class="btn btn-dark" href="../logout.php">
+                        Sair
+                        <i class="bi bi-box-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
 
     <div class="container">
         <div class="row">
@@ -57,8 +78,8 @@
                                                 <i class="bi bi-gear"></i>
                                             </button>
                                             <ul class="dropdown-menu">
-                                                <li><a class="dropdown-item" href="form.php?ref='.base64_encode($row->pk_cliente).'"><i class="bi bi-pencil me-3"></i>Editar</a></li>
-                                                <li><a class="dropdown-item" onclick= "if(confirm(\'Deseja realmente remover este registro?\')) { window.location=\'remover.php?ref='.base64_encode($row->pk_cliente).'\'}" href="#"><i class="bi bi-trash me-3"></i>Remover</a></li>
+                                                <li><a class="dropdown-item" href="form.php?ref=' . base64_encode($row->pk_cliente) . '"><i class="bi bi-pencil me-3"></i>Editar</a></li>
+                                                <li><a class="dropdown-item" onclick= "if(confirm(\'Deseja realmente remover este registro?\')) { window.location=\'remover.php?ref=' . base64_encode($row->pk_cliente) . '\'}" href="#"><i class="bi bi-trash me-3"></i>Remover</a></li>
                                             </ul>
                                         </div>
                                         </td>

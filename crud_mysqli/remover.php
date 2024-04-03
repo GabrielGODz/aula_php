@@ -1,5 +1,7 @@
 <?php
 
+include("../verificar_autenticidade");
+
 if (isset($_GET['ref'])) {
     $pk_cliente = base64_decode(trim($_GET['ref']));
 

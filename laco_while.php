@@ -45,9 +45,9 @@ $numero = $_POST["numero"] ?? 0;
 
                         $contador = 1;
 
-                        while($contador <= $numero) {
+                        while ($contador <= $numero) {
 
-                            $numeros.= $contador . " - ";
+                            $numeros .= $contador . " - ";
                             $contador++;
                         }
 

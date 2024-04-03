@@ -14,22 +14,22 @@ $numero1 = $_POST["numero1"] ?? 0;
 $numero2 = $_POST["numero2"] ?? 0;
 $operador = $_POST["operador"] ?? "somar";
 
-if($operador == "somar") {
+if ($operador == "somar") {
     $resultado = $numero1 + $numero2;
-} elseif($operador == "subtrair") {
+} elseif ($operador == "subtrair") {
     $resultado = $numero1 - $numero2;
-} elseif($operador == "multiplicar") {
+} elseif ($operador == "multiplicar") {
     $resultado = $numero1 * $numero2;
-} elseif($operador == "dividir") {
-    if($numero2 == 0) {
+} elseif ($operador == "dividir") {
+    if ($numero2 == 0) {
         echo "
         <script>
             alert('Impossível divisão por ZERO');
             exit();
         </script>
         ";
-    }else {
-    $resultado = $numero1 / $numero2;
+    } else {
+        $resultado = $numero1 / $numero2;
     }
 }
 
@@ -60,10 +60,10 @@ if($operador == "somar") {
                     <div class="mb-3">
                         <label for="operador" class="form-label">Operador</label>
                         <select class="form-control" id="operador" name="operador">
-                            <option <?php echo $operador=="somar" ? "selected" : "";?> value="somar">Somar</option>
-                            <option <?php echo $operador=="subtrair" ? "selected" : "";?> value="subtrair">Subtrair</option>
-                            <option <?php echo $operador=="multiplicar" ? "selected" : "";?> value="multiplicar">Multiplicar</option>
-                            <option <?php echo $operador=="dividir" ? "selected" : "";?> value="dividir">Dividir</option>
+                            <option <?php echo $operador == "somar" ? "selected" : ""; ?> value="somar">Somar</option>
+                            <option <?php echo $operador == "subtrair" ? "selected" : ""; ?> value="subtrair">Subtrair</option>
+                            <option <?php echo $operador == "multiplicar" ? "selected" : ""; ?> value="multiplicar">Multiplicar</option>
+                            <option <?php echo $operador == "dividir" ? "selected" : ""; ?> value="dividir">Dividir</option>
                         </select>
                     </div>
                     <div class="mb-3">
@@ -96,4 +96,5 @@ if($operador == "somar") {
     </script>
 
 </body>
+
 </html>

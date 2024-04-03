@@ -1,5 +1,7 @@
 <?php
 
+include("../verificar_autenticidade");
+
 // VERIFICA SE ESTÁ VINDO DADOS VIA POST
 if ($_POST) {
     // PEGAR INFORMAÇÕES VINDAS DO FORMULÁRIO
@@ -57,7 +59,6 @@ if ($_POST) {
     </script>
     ";
     exit;
-
 } else {
     // REDIRECIONA O USUÁRIO PARA A PÁGINA PRINCIPAL DO DIRETÓRIO
     header("Location: ./");
