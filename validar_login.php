@@ -31,11 +31,17 @@ if ($_POST) {
 
         if (mysqli_num_rows($query) > 0) {
 
+            // ORGANIZA O DADOS DO BANCO COMO OBJETOS NA VARIÁVEL $ROW
+            $row = mysqli_fetch_object($query);
+
             // CRIAR SESSÃO PARA VARIÁVEL GLOBAL
             session_start();
 
             // DECLARO VARIÁVEL GLOBAL INFORMANDO QUE USUÁRIO ESTÁ AUTENTICADO CORRETAMENTE
             $_SESSION["autenticado"] = true;
+            $_SESSION["pk_usuario"] = $row->pk_usuario;
+            $_SESSION["nome_usuario"] = $row->nome;
+            $_SESSION["tempo_login"]= time();
 
             header('Location: ./crud_mysqli');
             exit;
