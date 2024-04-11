@@ -42,8 +42,23 @@ if ($_POST) {
         ";
     }
 
-    // ENVIAR A SINTAXE SQL AO MYSQL
-    $query = mysqli_query($conn, $sql);
+    try {
+        // ENVIAR A SINTAXE SQL AO MYSQL
+        $query = mysqli_query($conn, $sql);
+    } catch (Exception $e) {
+        if (mysqli_errno($conn) == 1062) {
+            $msg = "Campo CPF, E-mail e/ou Whatsapp já cadastrado.";
+        }
+        echo
+        "
+        <script>
+            alert('$msg');
+            window.location='./';
+        </script>   
+        ";
+
+        exit;
+    }
 
     // VERIFICA SE CADASTROU CORRETAMENTE
     if ($query) {
@@ -52,12 +67,6 @@ if ($_POST) {
         $msg = "Error: " . mysqli_error($conn);
     }
 
-    echo "
-    <script>
-        alert('$msg');
-        window.location='./';
-    </script>
-    ";
     exit;
 } else {
     // REDIRECIONA O USUÁRIO PARA A PÁGINA PRINCIPAL DO DIRETÓRIO
