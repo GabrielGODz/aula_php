@@ -13,3 +13,5 @@ if ($conn) {
     echo "Falha ao conectar ao Banco de Dados";
     exit;
 }
+
+?>

@@ -9,7 +9,8 @@ if (isset($_GET['ref'])) {
 
     $sql = "
     DELETE FROM clientes
-    WHERE pk_cliente = '$pk_cliente' ";
+    WHERE pk_cliente = '$pk_cliente' 
+    ";
 
     try {
         $query = mysqli_query($conn, $sql);

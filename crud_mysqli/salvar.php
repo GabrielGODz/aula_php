@@ -1,6 +1,5 @@
 <?php
 
-include("../verificar_autenticidade");
 
 // VERIFICA SE ESTÁ VINDO DADOS VIA POST
 if ($_POST) {
@@ -54,7 +53,7 @@ if ($_POST) {
         <script>
             alert('$msg');
             window.location='./';
-        </script>   
+        </script>
         ";
 
         exit;
